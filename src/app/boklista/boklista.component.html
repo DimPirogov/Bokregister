@@ -6,15 +6,16 @@
 ></i> för att radera boken! </p>
 <ul class="books">
   <li *ngFor="let bok of books" class="list-group-item">
-    <button type="button" class="button">
+    <a routerLink="/book-edit/{{ bok.id }}">
       <span class="badge">ID: {{ bok.id }}</span>
-      Titel:"{{ bok.title }}"
-      Författare:{{ bok.author }}
-      År:{{ bok.year }}
-      Genre:{{ bok.genre }}
-    </button>
+      Titel: "{{ bok.title }}",
+      Författare: {{ bok.author }},
+      År: {{ bok.year }},
+      Genre: {{ bok.genre }}
+    </a>
     <i
-      class="fa fa-trash fa-2x pull-right"
+      class="fa fa-trash fa-2x"
+      (click)="delete(bok.id)"
     ></i>
   </li>
 </ul>

@@ -17,15 +17,13 @@ body{
 }
 
 .li{
-  width: 100%;
+  width: auto;
 }
 
 .button:hover, li:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
-
-
 
 .badge {
   display: inline-block;

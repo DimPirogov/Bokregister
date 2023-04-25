@@ -1,3 +1,8 @@
+<button
+type="button"
+(click)="goBack()"
+class="button"
+>Tillbaka</button>
 <h2>Registrera ny book</h2>
 <p>Fyll i rutorna</p>
 <form
@@ -12,9 +17,9 @@ style="width: 500px"
     name="title"
     placeholder="Ny titel"
     class="form-control"
-    #titleInput="ngModel"
+    #title="ngModel"
     required
-    [ngClass]="{'is-invalid': titleInput.dirty}"
+
   >
   <input
     type="text"
@@ -22,6 +27,7 @@ style="width: 500px"
     name="author"
     placeholder="Ny författare"
     class="form-control"
+    #author="ngModel"
     required
   >
   <input
@@ -32,6 +38,7 @@ style="width: 500px"
     min="1700"
     max="2023"
     class="form-control"
+    #year="ngModel"
     required
   >
   <select
@@ -39,6 +46,7 @@ style="width: 500px"
     name="genre"
     placeholder="Välj genre"
     class="form-control"
+    #genre="ngModel"
     required
   >
     <option value="">Select option</option>
@@ -52,5 +60,9 @@ style="width: 500px"
   <button
     class="btn btn-dark"
     [disabled]="newBook.invalid"
-  >Spara ny book</button>
+    [ngClass]="{
+      'btn-success': newBook.valid,
+      'btn-danger': newBook.invalid,
+    }"
+  >Spara ny bok</button>
 </form>

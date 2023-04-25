@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoklistaComponent } from './boklista/boklista.component';
 import { NewBookComponent } from './new-book/new-book.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoklistaComponent,
-    NewBookComponent
+    NewBookComponent,
+    BookEditComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+<h2>Ändra i boken</h2>
+<button
+  type="button"
+  (click)="goBack()"
+  class="button"
+>Tillbaka</button>
+<div *ngIf="bok">
+  <h3>Titel: {{bok.title | uppercase}}</h3>
+  <div><span>ID: </span>{{ bok.id }}</div>
+  <div class="list-group">
+    <label for="title">Titel:</label>
+    <input id="title" [(ngModel)]="bok.title" placeholder="Titel">
+    <label for="author">Författare: </label>
+    <input id="author" [(ngModel)]="bok.author" placeholder="Författare">
+    <label for="year">Utgivningsår:</label>
+    <input id="year" [(ngModel)]="bok.year" placeholder="Utgivningsår">
+    <label for="genre">Genre:</label>
+    <input id="genre" [(ngModel)]="bok.genre" placeholder="Genre">
+  </div>
+</div>
+<button
+  type="button"
+  (click)="save()"
+  class="button"
+>save</button>

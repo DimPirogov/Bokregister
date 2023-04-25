@@ -27,6 +27,55 @@
       "author": "David Gilman",
       "year": 2018,
       "genre": "novel"
+    },
+    {
+      "id": 5,
+      "title": "Scourgest of them all",
+      "author": "David Gilman",
+      "year": 2018,
+      "genre": "novel"
+    },
+    {
+      "title": "gfhgfdh",
+      "author": "dfhgfdg",
+      "year": 2018,
+      "genre": "drama",
+      "id": 6
+    },
+    {
+      "title": "ghdhhdsfhdsf",
+      "author": "dfhhdshsdhsdfhfs",
+      "year": 2014,
+      "genre": "horror",
+      "id": 7
+    },
+    {
+      "title": "halloj",
+      "author": "Nextcoming",
+      "year": 1850,
+      "genre": "horror",
+      "id": 8
+    },
+    {
+      "title": "Lagen",
+      "author": "Staten",
+      "year": 1960,
+      "genre": "horror",
+      "id": 9
+    },
+    {
+      "title": "wera",
+      "author": "wera",
+      "year": 2018,
+      "genre": "humour",
+      "id": 10
+    },
+    {
+      "title": "sista",
+      "author": "ännu en",
+      "year": 2019,
+      "genre": "humour",
+      "id": 11
     }
   ]
 }
