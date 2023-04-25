@@ -1,0 +1,56 @@
+<h2>Registrera ny book</h2>
+<p>Fyll i rutorna</p>
+<form
+class="card card-body mt-3"
+#newBook="ngForm"
+style="width: 500px"
+(submit)="saveNew(newBook)"
+>
+  <input
+    type="text"
+    ngModel
+    name="title"
+    placeholder="Ny titel"
+    class="form-control"
+    #titleInput="ngModel"
+    required
+    [ngClass]="{'is-invalid': titleInput.dirty}"
+  >
+  <input
+    type="text"
+    ngModel
+    name="author"
+    placeholder="Ny författare"
+    class="form-control"
+    required
+  >
+  <input
+    type="number"
+    ngModel
+    name="year"
+    placeholder="Välj utgivningsår"
+    min="1700"
+    max="2023"
+    class="form-control"
+    required
+  >
+  <select
+    ngModel
+    name="genre"
+    placeholder="Välj genre"
+    class="form-control"
+    required
+  >
+    <option value="">Select option</option>
+    <option value="fiction">Fiction</option>
+    <option value="drama">Drama</option>
+    <option value="novel">Novel</option>
+    <option value="horror">Horror</option>
+    <option value="humour">Humour</option>
+    <option value="crime">Crime</option>
+  </select>
+  <button
+    class="btn btn-dark"
+    [disabled]="newBook.invalid"
+  >Spara ny book</button>
+</form>

@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+/* .card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+} */
+body{
+  margin: 2em;
+}
+
+.books{
+  margin-top: 2px;
+}
+
+
+.button, p{
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+.li{
+  width: 100%;
+}
+
+.button:hover, li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+
+
+.badge {
+  display: inline-block;
+  /* font-size: small; */
+  color: white;
+  /* padding: 0.8em 0.7em 0 0.7em; */
+  background-color: #405061;
+  /* line-height: 1em; */
+  /* position: relative; */
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}

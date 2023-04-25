@@ -1,0 +1,20 @@
+<h2>Böcker i lager</h2>
+<a routerLink="/new-book">Lägg till ny bok</a>
+<br><br>
+<p>Tryck på boken för att ändra uppgifter! Tryck på <i
+  class="fa fa-trash fa-2x"
+></i> för att radera boken! </p>
+<ul class="books">
+  <li *ngFor="let bok of books" class="list-group-item">
+    <button type="button" class="button">
+      <span class="badge">ID: {{ bok.id }}</span>
+      Titel:"{{ bok.title }}"
+      Författare:{{ bok.author }}
+      År:{{ bok.year }}
+      Genre:{{ bok.genre }}
+    </button>
+    <i
+      class="fa fa-trash fa-2x pull-right"
+    ></i>
+  </li>
+</ul>
