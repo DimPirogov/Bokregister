@@ -5,17 +5,18 @@ type="button"
 class="button"
 >Avbryt</button>
 <div *ngIf="bok">
-  <h3>Titel: {{bok.title | uppercase}}</h3>
-  <div><span>ID: </span>{{ bok.id }} titel: {{ bok.title }}</div>
-  <form>
-    <div
-      class="card card-body"
-      style="width: 500px"
-    >
+  <h3><span>ID: </span>{{ bok.id }}</h3>
+  <h4>Titel: {{bok.title | uppercase}}</h4>
+  <form
+    #formControl="ngForm"
+    class="card card-body"
+    style="width: 500px"
+  >
     <label for="title">Titel:</label>
     <input
       type="text"
       id="title"
+      name="title"
       [(ngModel)]="bok.title"
       placeholder="Titel"
       class="form-control"
@@ -24,6 +25,7 @@ class="button"
     <label for="author">Författare: </label>
     <input
       id="author"
+      name="author"
       type="text"
       [(ngModel)]="bok.author"
       placeholder="Författare"
@@ -33,6 +35,7 @@ class="button"
     <label for="year">Utgivningsår:</label>
     <input
       id="year"
+      name="year"
       type="number"
       [(ngModel)]="bok.year"
       placeholder="Utgivningsår"
@@ -44,6 +47,7 @@ class="button"
     <label for="genre">Genre:</label>
     <select
       id="genre"
+      name="genre"
       [(ngModel)]="bok.genre"
       placeholder="Genre"
       class="form-control"
@@ -57,11 +61,14 @@ class="button"
       <option value="humour">Humour</option>
       <option value="crime">Crime</option>
     </select>
-  </div>
   <button
     type="button"
-    class="btn btn-dark"
+    class="btn"
     (click)="save()"
-
+    [disabled]="formControl.invalid"
+    [ngClass]="{
+      'btn-success': formControl.valid,
+      'btn-danger': formControl.invalid,
+    }"
   >Spara ändringar</button>
   </form>
