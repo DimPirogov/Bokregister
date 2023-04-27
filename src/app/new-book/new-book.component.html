@@ -25,7 +25,8 @@
     type="text"
     ngModel
     name="author"
-    placeholder="Ny författare"
+    minlength="4"
+    placeholder="Ny författare, minst 4 tecken"
     class="form-control"
     #author="ngModel"
     required
@@ -34,7 +35,7 @@
     type="number"
     ngModel
     name="year"
-    placeholder="Välj utgivningsår"
+    placeholder="Välj utgivningsår, mellan 1700 och 2023"
     min="1700"
     max="2023"
     class="form-control"
