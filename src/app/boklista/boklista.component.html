@@ -1,9 +1,8 @@
 <h2>Böcker i lager</h2>
 <a routerLink="/new-book">Lägg till ny bok</a>
 <br><br>
-<p>Tryck på boken för att ändra uppgifter! Tryck på <i
-  class="fa fa-trash fa-2x"
-></i> för att radera boken! </p>
+<p>Tryck på boken för att ändra uppgifter!</p>
+<p>Tryck på <i class="fa fa-trash fa-2x"></i> för att radera boken! </p>
 <ul class="books">
   <li *ngFor="let bok of books" class="list-group-item">
     <a routerLink="/book-edit/{{ bok.id }}">
@@ -16,6 +15,7 @@
     <i
       class="fa fa-trash fa-2x"
       (click)="delete(bok.id)"
+      title="radera"
     ></i>
   </li>
 </ul>
