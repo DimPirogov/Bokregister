@@ -1,15 +1,15 @@
 <button
-type="button"
-(click)="goBack()"
-class="button"
+  type="button"
+  (click)="goBack()"
+  class="button"
 >Avbryt</button>
 <h2>Registrera ny book</h2>
 <p>Fyll i rutorna</p>
 <form
-class="card card-body mt-3"
-#newBook="ngForm"
-style="width: 500px"
-(submit)="saveNew(newBook)"
+  class="card card-body mt-3"
+  #newBook="ngForm"
+  style="width: 500px"
+  (submit)="saveNew(newBook)"
 >
   <input
     type="text"
